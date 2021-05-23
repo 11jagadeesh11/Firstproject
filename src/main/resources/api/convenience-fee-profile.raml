@@ -1,0 +1,99 @@
+#%RAML 1.0
+title: Convenience-Fee-Profile
+description: These AP I's are used to perform operations on convenience fee profile in the MMS System.
+version: 1.0
+protocols: [HTTP, HTTPS]
+mediaType: 
+- application/json
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/4c042ae6-9efb-4e13-a344-d62c8b55c64e
+
+uses:
+  library: library/library.raml
+
+/convenienceFee:
+  post:
+    description: This API is for creating a convenience fee profile
+    body:
+        example: !include /examples/Create-Convenience-fee-request.json
+        type: library.createconviniencefeeprofile
+    responses:
+      200:
+        body:
+            example: !include /examples/Create-Convenience-fee-response.json
+    is:
+      - library.othererrors        
+
+  put:
+    description: This API is for modifying an existing Convenience Fee Profile.
+    body:
+      example: !include /examples/update-Convenience-fee-request.json
+      type: library.updateconviniencefeeprofile
+    responses:
+      200:
+        body:
+          example: !include /examples/update-Convenience-fee-response.json
+    is:
+      - library.othererrors
+  /{convenienceFeeProfileId}:
+    get:
+      description: This API is to fetch a Convenience Fee profile.
+      body:
+        type: library.convenienceFeeProfileId
+      responses:
+        200:
+          body:
+            example: !include /examples/Convenience-fee-profile-by-id-response.json
+        403:
+          description: User not authorized to perform this action.
+        500:
+          description: Failed To Fetch Convenience Fee Profile
+
+  delete:
+    description: This API is for deleting a Convenience Fee Profile.
+    body:
+      example: !include /examples/delete-Convenience-fee-request.json
+      type: library.deleteconviniencefeeprofile
+    responses:
+      200:
+        body:
+          example: !include /examples/delete-Convenience-fee-response.json
+      500:
+          description: Failed to delete invoice.    
+    is:
+      - library.othererrors    
+/convenienceFees:
+  post:
+    description: This API is to search Convenience Fee Profiles according to the criteria.
+    body:
+      example: !include /examples/search-Convenience-fee-request.json
+    responses:
+      200:
+        body:
+          example: !include /examples/search-Convenience-fee-response.json
+      403:
+        description: Logged in user does not belong to this merchant.
+
+/calculate/convenienceFee:
+  post:
+    body:
+      example: !include /examples/calculate-Convenience-fee-request.json
+    responses:
+      200:
+        body:
+          example: !include /examples/calculate-Convenience-fee-response.json
+
+
+          
+                 
+
+
+
+
+
+              
+
+                        
+        
+
+
+

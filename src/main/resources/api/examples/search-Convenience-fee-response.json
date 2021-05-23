@@ -1,0 +1,22 @@
+{
+  "count": 1,
+  "rows": [
+    {
+      "ConvenienceFeeProfileId": 1,
+      "ConvenienceFeeProfileName": "Test_Profile",
+      "AchFixed": 100,
+      "AchVariable": 2,
+      "AchMin": 100,
+      "AchMax": 150,
+      "AuthFixed": 100,
+      "AuthVariable": 2,
+      "AuthMin": 100,
+      "AuthMax": 150,
+      "SaleFixed": 100,
+      "SaleVariable": 2,
+      "SaleMin": 100,
+      "SaleMax": 150,
+      "CreatedDateTime": "2020-04-13T12:28:41.200Z"
+    }
+  ]
+}

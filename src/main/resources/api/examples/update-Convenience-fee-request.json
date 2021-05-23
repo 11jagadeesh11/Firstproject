@@ -1,0 +1,16 @@
+{
+    "ConvenienceFeeProfileId": 1,
+    "ConvenienceFeeProfileName": "Test_Profile",
+    "AchFixed": 1000,
+    "AchVariable": 10,
+    "AchMin": 500,
+    "AchMax": 1000,
+    "AuthFixed": 1000,
+    "AuthVariable": 10,
+    "AuthMin": 500,
+    "AuthMax": 1000,
+    "SaleFixed": 1000,
+    "SaleVariable": 10,
+    "SaleMin": 500,
+    "SaleMax": 1000
+}
