@@ -12,5 +12,6 @@
   "SaleFixed": 1000,
   "SaleVariable": 10,
   "SaleMin": 500,
-  "SaleMax": 1000
+  "SaleMax": 1000,
+  "Saleavg": 20
 }
